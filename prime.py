@@ -17,7 +17,7 @@ while starting_number < upper_boundary+1:
         prime_number.append(starting_number) # includes the first two prime numbers: 2 and 3
 
     else:
-        print "Current number under evaluation: ", starting_number
+        print "Current number under evaluation: ", starting_number, 'terminating point: ', upper_boundary
         while divisor < halfway_point+1:
 
             if starting_number%divisor != 0: # there is a remainder
