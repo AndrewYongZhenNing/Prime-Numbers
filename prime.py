@@ -34,33 +34,6 @@ while starting_number < upper_boundary+1:
     starting_number += 1
 
 # MERSENNE PRIMES
-index = 0
-
-# while index < len(prime_number):
-#
-#     p = 1
-#     mersenne = 2**p - 1
-#
-#     for prime in prime_number:
-#         if prime == mersenne:
-#             mersenne_prime.append(prime)
-#     p += 1
-#
-#     while mersenne < prime_number[index]:
-#
-#         print "Current number under evaluation for Mersenne prime", mersenne
-#
-#         if mersenne == prime_number[index]:
-#             mersenne_prime.append(mersenne)
-#             print "Ping!", mersenne, " is a Mersenne prime number. "
-#             break
-#
-#         else:
-#             p += 1
-#             mersenne = 2**p - 1
-#         print 'value of power: ', p
-#     p += 1
-#     index += 1
 
 p = 1
 mersenne = 2**p - 1
