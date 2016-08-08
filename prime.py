@@ -2,9 +2,14 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 # ALL PRIMES
-starting_number = 2
+starting_number = input("ENTER LOWER BOUNDARY: ")
 upper_boundary =  input("ENTER UPPER BOUNDARY: " ) # if you want input from terminal, do not put ampersand & in the command as anything AFTER the execution of the code is regarded as writing on the terminal
+lower_boundary = starting_number
+starting_number = int(starting_number)
 upper_boundary = int(upper_boundary)
+
+file_title_1 = str(starting_number)
+file_title_2 = str(upper_boundary)
 
 prime_number = []
 mersenne_prime = []
@@ -33,6 +38,9 @@ while starting_number < upper_boundary+1:
 
     starting_number += 1
 
+
+
+
 # MERSENNE PRIMES
 
 p = 1
@@ -51,6 +59,19 @@ while mersenne < prime_number[-1]+1:
 
     p += 1
     mersenne = 2**p - 1
+
+print "\nCalculation completed. \nBetween ",  lower_boundary, " to" , upper_boundary, ", there are ", len(prime_number), " of prime numbers."
+
+
+number = np.linspace(1,len(prime_number),len(prime_number))
+
+f = open("MersennePrime" + file_title_1 + "-" + file_title_2 + ".dat","w")
+f.write("Number" + "    " + "Mersenne Prime")
+
+for number, prime in zip(number,mersenne_prime):
+    f.write("\n" + str(number) + "    " + str(mersenne_prime))
+
+f.close()
 
 
 def Plot(prime_number_list, mersenne_prime_list):
@@ -89,4 +110,4 @@ def Plot(prime_number_list, mersenne_prime_list):
     plt.show()
 
 
-Plot(prime_number,mersenne_prime)
+# Plot(prime_number,mersenne_prime)
