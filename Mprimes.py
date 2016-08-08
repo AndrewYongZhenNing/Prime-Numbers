@@ -25,7 +25,7 @@ while p < upper_boundary+1:
 
     else:
         while divisor < end_divisor+1:
-
+            print 'Current divisor: ', divisor, '\t', 'Divisor terminating point: ', end_divisor, "\t Terminating point: ", 2**upper_boundary - 1
             remainder = mersenne%divisor
 
             if remainder != 0:
@@ -46,8 +46,8 @@ while p < upper_boundary+1:
 
     p +=1
 
-    if p == upper_boundary+1:
-        print "\nCalculation completed."
+
+print "\nCalculation completed. \nBetween ",  p, " to" , upper_boundary, ", there are ", len(mersenne_prime), " of Mersenne primes."
 
 number = np.linspace(1,len(mersenne_prime),len(mersenne_prime))
 
