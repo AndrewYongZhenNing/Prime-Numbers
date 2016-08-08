@@ -1,4 +1,5 @@
 import numpy as np
+import math
 
 print "Welcome to the Mersenne Prime programme, please select a lower and an upper boundary to begin the search: \n"
 
@@ -20,7 +21,7 @@ while p < upper_boundary+1:
     print "Number under evaluation: ", mersenne , "\t Power: ", p, "\t Terminating point: ", 2**upper_boundary - 1
 
     divisor = 2
-    end_divisor = int(np.sqrt(mersenne))
+    end_divisor = math.sqrt(mersenne)
 
     if mersenne == 3:
         mersenne_prime.append(mersenne)
