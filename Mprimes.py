@@ -4,9 +4,11 @@ print "Welcome to the Mersenne Prime programme, please select a lower and an upp
 
 p = input("ENTER LOWER BOUNDARY: ")
 upper_boundary = input ("ENTER UPPER BOUNDARY: ")
+lower_boundary = p
 
 mersenne = 2**p - 1
 mersenne_prime = []
+power = []
 
 file_title_1 = str(p)
 file_title_2 = str(upper_boundary)
@@ -22,6 +24,7 @@ while p < upper_boundary+1:
 
     if mersenne == 3:
         mersenne_prime.append(mersenne)
+        power.append(p)
 
     else:
         while divisor < end_divisor+1:
@@ -35,6 +38,7 @@ while p < upper_boundary+1:
                 if divisor == end_divisor+1 and remainder!=0:
 
                     mersenne_prime.append(mersenne)
+                    power.append(p)
 
                     print "Ping! ", mersenne, " is a Mersenne prime!"
                     break
@@ -47,15 +51,15 @@ while p < upper_boundary+1:
     p +=1
 
 
-print "\nCalculation completed. \nBetween ",  p, " to" , upper_boundary, ", there are ", len(mersenne_prime), " of Mersenne primes."
+print "\nCalculation completed. \nBetween ",  lower_boundary, " to" , upper_boundary, ", there are ", len(mersenne_prime), " of Mersenne primes."
 
 number = np.linspace(1,len(mersenne_prime),len(mersenne_prime))
 
 
 f = open("MersennePrime" + file_title_1 + "-" + file_title_2 + ".dat","w")
-f.write("Number" + "    " + "Mersenne Prime")
+f.write("Power " + "    " "Mersenne Prime")
 
-for number, prime in zip(number,mersenne_prime):
-    f.write("\n" + str(number) + "    " + str(prime))
+for p, prime in zip(power,mersenne_prime):
+    f.write("\n" + str(p) + "    " + str(prime))
 
 f.close()
