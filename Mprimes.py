@@ -27,8 +27,6 @@ while p < upper_boundary+1:
     else:
         while divisor < end_divisor+1:
 
-            if (divisor*1.)/(end_divisor+1) = 0.5
-
             remainder = mersenne%divisor
 
             if remainder != 0:
