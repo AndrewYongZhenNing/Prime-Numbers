@@ -17,6 +17,8 @@ while p < upper_boundary+1:
 
     mersenne = 2**p - 1
 
+    print "Number under evaluation: ", mersenne , "\t Power: ", p, "\t Terminating point: ", 2**upper_boundary - 1
+
     divisor = 2
     end_divisor = int(np.sqrt(mersenne))
 
