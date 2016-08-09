@@ -12,7 +12,8 @@ upper_boundary = input("ENTER UPPER BOUNDARY: ")
 file_title_1 = str(p)
 file_title_2 = str(upper_boundary)
 
-mersenne_prime = []
+mersenne_prime = [3,7]
+power = [2,3]
 
 
 while p < upper_boundary+1:
@@ -33,6 +34,7 @@ while p < upper_boundary+1:
 
         if remainder == 0:
             mersenne_prime.append(mersenne)
+            power.append(p)
             print "Ping! ", mersenne, " is a Mersenne Prime!"
             break
 
